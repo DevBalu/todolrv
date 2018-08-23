@@ -16,7 +16,7 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todo = Todo::paginate(15);
+        $todo = Todo::orderBy("created_at", "desc")->paginate(15);
 
         return TodoResource::collection($todo);
     }

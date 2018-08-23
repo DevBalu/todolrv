@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 
 /**
@@ -14,6 +15,9 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+//  connect "moment' filter for date 
+Vue.use(require('vue-moment'));
 
 Vue.component('todos', require('./components/Todos.vue'));
 
