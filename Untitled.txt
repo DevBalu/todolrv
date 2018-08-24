@@ -1,0 +1,16 @@
+
+mysql://b8e2f4678f3062:1261b63e@eu-cdbr-west-02.cleardb.net/heroku_3295a44d00ad245?reconnect=true
+
+DB_CONNECTION=mysql
+DB_HOST=eu-cdbr-west-02.cleardb.net
+DB_PORT=3306
+DB_DATABASE=heroku_3295a44d00ad245
+DB_USERNAME=b8e2f4678f3062
+DB_PASSWORD=1261b63e
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=todo
+DB_USERNAME=root
+DB_PASSWORD=null

@@ -26,10 +26,10 @@
 
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <input type="text" v-model="todo.title" id="todo_title" class="form-control" >
+                                    <input type="text" v-model="todo.title" id="todo_title" class="form-control" placeholder="Task">
                                 </div>
                                 <div class="form-group">
-                                    <textarea id="todo_body" class="form-control"  v-model="todo.body" rows="10"></textarea>
+                                    <textarea id="todo_body" class="form-control"  v-model="todo.body" rows="10" placeholder="Description"></textarea>
                                 </div>
                             </div>
 
@@ -54,7 +54,8 @@
         <section id="navigation">
             <nav aria-label="Page navigation ">
                 <span class="btn-group-sm">
-                    <button type="button" class="btn btn-danger bmd-btn-fab"  data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-danger bmd-btn-fab"  data-toggle="modal" data-target="#exampleModal"
+                    @click="clearForm()">
                         <i class="material-icons"> add </i>
                     </button>
                 </span>
@@ -94,7 +95,7 @@
                             {{ todo.updated_at  | moment(" MMMM DD.YYYY") }}
                         </small>
 
-                        <button type="button" class="btn btn-success small"  @click="editTodo(todo, !todo.done);addTodo();">
+                        <button type="button" v-bind:class="[{'btn-success' : !todo.done, 'btn-danget' : todo.done}]" class="btn  small"  @click="editTodo(todo, !todo.done);addTodo();">
 
                             <i class="material-icons">check</i>
                         </button>
@@ -244,6 +245,14 @@ export default {
             this.todo.title = todo.title;
             this.todo.body = todo.body;
             this.todo.done = check;
+        },
+        clearForm(){
+            this.edit = false;
+            this.todo.id = "";
+            this.todo.todo_id = "";
+            this.todo.title = "";
+            this.todo.body = "";
+            this.todo.done = false;
         }
     }
 
