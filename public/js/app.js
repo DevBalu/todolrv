@@ -52564,6 +52564,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -52966,7 +52968,7 @@ var render = function() {
                     {
                       staticClass: "btn  small",
                       class: [
-                        { "btn-success": !todo.done, "btn-danget": todo.done }
+                        { "btn-success": !todo.done, "btn-dark": todo.done }
                       ],
                       attrs: { type: "button" },
                       on: {
@@ -52986,7 +52988,10 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-warning small",
+                      staticClass: "btn  small",
+                      class: [
+                        { "btn-warning": !todo.done, "btn-dark": todo.done }
+                      ],
                       attrs: {
                         type: "button",
                         "data-toggle": "modal",
@@ -53008,7 +53013,10 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-danger",
+                      staticClass: "btn small",
+                      class: [
+                        { "btn-danger": !todo.done, "btn-dark": todo.done }
+                      ],
                       attrs: { type: "button" },
                       on: {
                         click: function($event) {

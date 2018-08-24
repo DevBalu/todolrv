@@ -95,18 +95,20 @@
                             {{ todo.updated_at  | moment(" MMMM DD.YYYY") }}
                         </small>
 
-                        <button type="button" v-bind:class="[{'btn-success' : !todo.done, 'btn-dark' : todo.done}]" class="btn  small"  @click="editTodo(todo, !todo.done);addTodo();">
+                        <button type="button" v-bind:class="[{'btn-success' : !todo.done, 'btn-dark' : todo.done}]" class="btn  small"
+                            @click="editTodo(todo, !todo.done);addTodo();">
 
                             <i class="material-icons">check</i>
                         </button>
                         
-                        <button type="button" v-bind:class="[{'btn-warning' : !todo.done, 'btn-dark' : todo.done}]" class="btn  small" data-toggle="modal" data-target="#exampleModal" 
-                             @click="editTodo(todo, todo.done)">
+                        <button type="button" v-bind:class="[{'btn-warning' : !todo.done, 'btn-dark' : todo.done}]" class="btn  small"
+                            data-toggle="modal" data-target="#exampleModal" 
+                            @click="editTodo(todo, todo.done)">
 
                             <i class="material-icons">edit</i>
                         </button>
 
-                        <button type="button"  v-bind:class="[{'btn-danger' : !todo.done, 'btn-dark' : todo.done}]" class="btn" 
+                        <button type="button"  v-bind:class="[{'btn-danger' : !todo.done, 'btn-dark' : todo.done}]" class="btn small" 
                             @click="deleteTodo(todo.id)">
 
                             <i class="material-icons"> delete </i>
