@@ -100,7 +100,7 @@
                             <i class="material-icons">check</i>
                         </button>
                         
-                        <button type="button" class="btn btn-warning small" data-toggle="modal" data-target="#exampleModal" 
+                        <button type="button" v-bind:class="[{'btn-warning' : !todo.done, 'btn-danget' : todo.done}]" class="btn  small" data-toggle="modal" data-target="#exampleModal" 
                              @click="editTodo(todo, todo.done)">
 
                             <i class="material-icons">edit</i>
